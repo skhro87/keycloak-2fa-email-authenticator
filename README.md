@@ -20,15 +20,15 @@ Inspired by [Keycloak 2FA SMS Authenticator](https://github.com/dasniko/keycloak
 
     You can find the `.jar` in `build/libs`.
 
-2. Copy files into Keycloak
+2. copy files into Keycloak
 
    * `cp build/libs/keycloak-email-authenticator-1.0-SNAPSHOT-all.jar /opt/keycloak/providers/`
    * `cp src/main/resources/theme-resources/templates/login-email.ftl /opt/jboss/keycloak/themes/base/login/`
 
-3. Add message texts e.g. like this
+3. add message texts e.g. like this
 
    * `cat src/main/resources/theme-resources/messages/messages_en.properties >> /opt/jboss/keycloak/themes/base/login/messages/messages_en.properties`
 
-4. Setup new Authentication flow in Keycloak `Authentication -> Flows`
+4. setup new authentication flow in Keycloak `Authentication -> Flows` and update bindings in `Authentication -> Bindings` 
 
-5. Optional: Configure Plugin Settings like `Email Subject`, `Code Length`, `TTL`, ...
+5. optional: configure plugin settings like `Email Subject`, `Code Length`, `TTL`, ...
